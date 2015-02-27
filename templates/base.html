@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title> </title>
+	<meta charset="utf-8" />
+	
+	<link rel="stylesheet" href="/static/css/styles.css" type="text/css" />
+	<meta name="viewport content = "width-device-width, initial-scale=1.0">
+</head>
+
+<body class="body">
+	<header class="mainHead">
+		<img src="/static/img/hp_head_nrel_statement.gif" />
+		<nav><ul>
+			<li><a href='/'>Home</a></li>
+			<li><a href='/sdms/enter'>Enter </a></li>
+			<li><a href='/sdms/range_search'>Search</a></li>
+            <li><a href='/accounts/register'>Register</a></li>
+             <form action="/sdms/search/" method="get" id="search_form">
+                <input type = "text" name="q" id="id_q" placeholder="Keyword Search"/>
+                <input type="submit" name="submit" value="Search">
+            </form>
+		</ul></nav>
+
+	</header>
+    <div id="logged">
+        {{user}}
+        {% if user.is_anonymous %}
+             <a href="/accounts/login/">login</a>
+        {% else %}
+            <a href="/accounts/logout/">logout</a>
+        {% endif %}
+
+    </div>
+	<div class="mainContent">
+		{% block content %}
+		{% endblock %}
+	</div>
+	
+	<footer class="mainFooter">
+		<p>National Renewable Energy Laboratory </br>
+ 		15013 Denver West Parkway </br>
+ 		Golden, CO 80401</br>
+ 		303-275-3000</p>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<form id="enter_form" action="/sdms/enter/"  enctype="multipart/form-data" method="post">{% csrf_token %}
+    <ul>
+        {{form.as_ul}}
+        {{attach.as_ul}}
+    </ul>
+    <input id="enter_submit" type="submit" name="submit" value="Enter Sample">
+</form>
+
+{% endblock %}

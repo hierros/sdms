@@ -1,0 +1,128 @@
+body {
+	color: #000305;
+	font-size: 80%;
+	font-family: 'Arial';
+	line-height: 1.5;
+	text-align: left;
+
+}
+
+div {
+	margin: 1% 0% 1% 1%;
+}
+
+a{
+	text-decoration: none;
+}
+
+a:link, a:visited{
+	color:#1A94D6;
+}
+
+a:hover, a:active{
+	color:#797979;
+}
+
+.body{
+	margin: 0 auto;
+	width: 75%;
+	clear: both;
+	width: 1000px;
+}
+
+.mainHead nav{
+	background-color: #797979;
+	height: 40px;
+}
+
+.mainHead nav ul {
+	margin: 0 auto;
+}
+
+.mainHead nav ul li, .mainHead nav ul ul.sub-menu li{
+	display: inline-block;
+	list-style-type: none;
+}
+
+.mainHead nav ul li {
+	position: relative;
+}
+
+.mainHead nav ul li a, .mainHead nav ul ul.sub-menu li a{
+	text-decoration: none;
+	color: #fff;
+	background: #797979;
+	display: inline-block;
+	width: 45px;
+}
+
+.mainHead nav ul ul.sub-menu {
+	display: none;
+	position: absolute;
+	top: 40px;
+	left: -40px;
+}
+
+.mainHead nav a:link, .mainHead nav a:visited {
+	color: #FFF;
+	padding: 10px 25px;
+	height: 20px;
+}
+
+.mainHead nav .active a:link,
+.mainHead nav .active a:visited,
+.mainHead nav a:hover,
+.mainHead nav a:active,
+.mainHead nav ul ul.sub-menu li a:hover {
+	background-color: #04BAE3;
+	text-shadow: none;
+}
+
+.mainHead nav ul li:hover ul.sub-menu {
+	display: block;
+}
+.mainContent {
+	line-height: 20px;
+}
+
+.content {
+	padding: 2% 2%;
+	margin: 1% 0% 1% 1%;
+}
+
+.postInfo {
+	font-style: italic;
+	font-size: 75%;
+	color: #989898;
+}
+
+.mainFooter {
+	width: 100%;
+	float: left;
+	margin-bottom: 2%;
+	background-color: #797979;
+}
+
+.mainFooter p{
+	width: 92%;
+	margin: 1% auto;
+	color: #fff;
+}
+
+ul li{
+    list-style-type: none;
+}
+
+#search_form{
+    position: relative;
+    float: right;
+    padding-top: 9px;
+}
+
+#enter_form label {
+    display: block;
+}
+
+#enter_submit {
+    margin-left: 40px;
+}

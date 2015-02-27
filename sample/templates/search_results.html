@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block content %}
+<table class="reference" style="width:100%">
+<tr>
+	<th>Tracking ID</th>
+	<th>Sample Name</th>
+	<th>External ID</th>
+	<th>Owner Name</th>
+    <th>Custodian Name</th>
+    <th>Feedstock</th>
+    <th>Treatment</th>
+    <th>Fraction</th>
+    <th>Create Date</th>
+    <th>Update</th>
+    <th>Delete</th>
+</tr>
+
+{% for result in sample %}
+<tr>
+    <td>{{result.id}}</td>
+    <td>{{result.sample_name}}</td>
+    <td>{{result.external_id}}</td>
+    <td>{{result.owner_name}}</td>
+    <td>{{result.custodian_name}}</td>
+    <td>{{result.feedstock.feedstock_name}}</td>
+    <td>{{result.treatment.treatment_name}}</td>
+    <td>{{result.fraction.fraction_name}}</td>
+    <td>{{result.create_date}}</td>
+    <td><a href="/sdms/update/{{result.id}}">update</a></td>
+    <td><a href="/sdms/delete/{{result.id}}">delete</a></td>
+</tr>
+
+{% endfor %}
+
+    <div class="pagination">
+    <span class="step-links">
+        {% if sample.has_previous %}
+            <a href="?{{queries.urlencode}}&amp;page={{ sample.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ sample.number }} of {{ sample.paginator.num_pages }}
+        </span>
+
+        {% if sample.has_next %}
+            <a href="?{{queries.urlencode}}&amp;page={{ sample.next_page_number }}">next</a>
+        {% endif %}
+    </span>
+</div>
+</table>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<form action="sdms/search_range" method="get"/>
+    <input type = "text" name="begin" placeholder="begin" />
+    <input type = "text" name="end" placeholder="end" />
+    <input type="submit" name="submit" value="Search">
+</form>
+{% endblock %}
